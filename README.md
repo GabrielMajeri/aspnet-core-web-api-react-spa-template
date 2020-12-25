@@ -24,6 +24,23 @@ The following are a list of other features you could add to the project to furth
 - Automated dependency updates ([Dependabot](https://dependabot.com/))
 - Automated code vulnerability scanning ([GitHub security features](https://github.com/features/security))
 
+## Running instructions
+
+You will have to install the [.NET 5.0 SDK](https://dotnet.microsoft.com/download) and [Node.js](https://nodejs.org/en/).
+
+### Local development server
+
+To start the back and front end development servers, you can go to the `backend/ExampleApp` directory and run `dotnet run`.
+
+This command might take a while on the first run, since it also installs all the dependencies required by ASP.NET and React.
+
+You can play around with the sample app at `https://localhost:5001`.
+
+### Testing
+
+- To run the back end unit tests, navigate to `backend` and run `dotnet test`.
+- To run the front end unit tests, navigate to `frontend` and run `npm test`.
+
 ## Why?
 
 I've created this template for my own use, since I couldn't find anything similar on the internet. While Microsoft provides a [standard React SPA template](https://docs.microsoft.com/en-us/aspnet/core/client-side/spa/react?view=aspnetcore-5.0&tabs=visual-studio) with the ASP.NET Core SDK, it hardly replicates the best practices found in the industry.
