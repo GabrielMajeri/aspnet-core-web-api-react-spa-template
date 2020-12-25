@@ -43,7 +43,7 @@ namespace ExampleApp
             // In production, the React files will be served from this directory
             services.AddSpaStaticFiles(configuration =>
             {
-                configuration.RootPath = "../../frontend/build";
+                configuration.RootPath = "frontend-build";
             });
         }
 
@@ -65,8 +65,7 @@ namespace ExampleApp
                 app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "ExampleApp v1"));
             }
 
-            app.UseHttpsRedirection();
-
+            app.UseStaticFiles();
             app.UseSpaStaticFiles();
 
             app.UseRouting();

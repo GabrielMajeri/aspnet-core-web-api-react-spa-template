@@ -1,0 +1,3 @@
+*
+!bin/Release/frontend/build
+!bin/Release/net5.0/

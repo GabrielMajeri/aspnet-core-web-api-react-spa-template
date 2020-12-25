@@ -10,6 +10,7 @@ This repository is a template for a modern web app, powered by [React.js](https:
 - [Data transfer objects](https://en.wikipedia.org/wiki/Data_transfer_object) for interfacing between the front and back end
 - [AutoMapper](https://automapper.org/) for automatically mapping between DTOs and entities
 - [TypeScript](https://www.typescriptlang.org/) support in the React app
+- Deployment through [Docker](https://www.docker.com/)
 
 ## Things not included
 
@@ -40,6 +41,22 @@ You can play around with the sample app at `https://localhost:5001`.
 
 - To run the back end unit tests, navigate to `backend` and run `dotnet test`.
 - To run the front end unit tests, navigate to `frontend` and run `npm test`.
+
+## Deployment instructions
+
+First, go to the `backend` directory and build the release version of the app:
+
+```sh
+dotnet publish -c Release
+```
+
+You can now build a Docker image using the [Dockerfile](backend/ExampleApp/Dockerfile) in the `backend/ExampleApp` directory.
+
+If you want to test the build production image locally, you can also use [docker-compose](https://docs.docker.com/compose/):
+
+```sh
+docker-compose up
+```
 
 ## Why?
 
